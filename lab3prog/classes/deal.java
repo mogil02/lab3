@@ -47,10 +47,9 @@ public class deal {
 		Service.service_output();
 	}
 	
-	//Метод подсчёта суммы, полученной потраченной клиентом за сделку.
-	public int sum_costs() {
-		int sum = 0;
-		sum = Car.get_cost() + Service.get_cost();
+	//Метод подсчёта суммы, потраченной клиентом за сделку.
+	public Integer sum_costs() {
+		Integer sum = Car.get_cost() + Service.get_cost();
 		return sum;
 	}
 

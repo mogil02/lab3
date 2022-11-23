@@ -48,4 +48,9 @@ public class car {
 	public int get_cost() {
 		return car_cost;
 	}
+	
+	//Метод установки цены автомобиля.
+	public void set_cost(int car_cost) {
+		this.car_cost = car_cost;
+	}
 }

@@ -4,7 +4,7 @@ import classes.*;
 public class main {
 	public static void main(String args[]) {
 		System.out.println();
-		String mname = "Митрофанов А.А.";
+String mname = "Митрофанов А.А.";
 		int id_m = 10;
 		int wag = 2000;
 		manager man1 = new manager();
@@ -61,18 +61,16 @@ public class main {
 		System.out.println("\n" + "ser3:");
 		ser3.service_output();
 		System.out.println("\n");
-		
-		deal dl1 = new deal();
-		deal dl2 = new deal(car3);
-		deal dl3 = new deal(car1, cl1, man1, ser1);
-		dl1.deal_input();
-		System.out.println("\n" + "dl1:");
-		dl1.deal_output();
-		System.out.println("\n" + "dl2:");
-		dl2.deal_output();
-		System.out.println("\n" + "dl3:");
-		dl3.deal_output();
-        	System.out.println("\n" + "Клиент всего потратил на сделку dl1: " + dl1.sum_costs());
+
+		deal[] Deals = new deal[3];
+		Deals[0] = new deal();
+		Deals[1] = new deal(car3);
+		Deals[2] = new deal(car1, cl1, man1, ser1);
+		for (int i = 0; i < 3; i++) {
+			System.out.println();
+			Deals[i].deal_output();
+			System.out.println("Общая трата криента на авто и доп услуги: " + Deals[i].sum_costs());
+		}
 		System.out.println();
 	}
 }
