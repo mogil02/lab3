@@ -39,7 +39,14 @@ public class specifications {
 		System.out.print("Введите максимальную скорость: ");
 		speed = inpt.nextInt();
 		System.out.print("Введите номер трансмиссии\n1) - Механика\n2) - Гидромеханика\n3) - Робот\n4) - Вариатор\nВвод: ");
+		try {
 		t_id = inpt.nextInt();
+		if (t_id > 4 || t_id < 1) throw new Exception("Введённое число не соответсвует условию.Число по умолчанию 1.");
+		}
+		catch (Exception ex) {
+			System.out.println(ex.getMessage());
+			t_id = 1;
+		}
 		System.out.print("Введите объём двигателя: ");
 		volume = inpt.nextDouble();
 	}
