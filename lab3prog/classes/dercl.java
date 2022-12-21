@@ -15,7 +15,7 @@ public class dercl extends client {
 		this.gender = gender;
 		this.age = age;
 	}
-	public void set_qawsswgender(char gender) {
+	public void set_gender(char gender) {
 		if (gender == 'M' || gender == 'F') {
 			this.gender = gender;
 		}

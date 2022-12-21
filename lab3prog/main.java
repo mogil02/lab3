@@ -1,15 +1,29 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Comparator;
 import classes.*;
 
 public class main {
 	public static void main(String args[]) {
-		dercl drcl = new dercl(12, "Иванов М. В.", 'M', 24);  
-        	client cl1 = new client(10, "Власенко Д. В.");
-        	client cl2 = new client(13, "Чазов В. В.");
+		ArrayList<client> cls = new ArrayList<client>();
 
-        	System.out.println(drcl); //вывод через toString()
-        	System.out.println(cl1); //вывод через toString()
-		System.out.println(cl1); //вывод через toString()
+		cls.add(new client(22, "Бодриков А. В."));
+		cls.add(new client(50, "Герасимов П. А."));
+		cls.add(new client(13, "Морозов О. Д."));
+		cls.add(new client(44, "Шнейдер А. Д."));
+		cls.add(new client(31, "Гаврилов А. Д."));
+		
+		System.out.print(cls + "\n\nРезультат поиска: ");
+
+		String name = new String("Гаврилов А. Д.");
+    		for (client cl : cls) {
+        		if (cl.get_name().equals(name)) {
+            			System.out.println("Нашёл!\n");
+        		}
+		}
+		
+		cls.sort(Comparator.comparing(client::get_id));
+		System.out.println("\nРезультат сортировки по id по возрастанию: " + cls);
 		
 	}
 }

@@ -33,7 +33,16 @@ public class client extends human implements interfacehuman {
 		System.out.println("ФИО клиента: " + super.FIO);
 	}
 	
-	public String toString() {
-		return "ID клиента: " + super.id + "\nФИО клиента: " + super.FIO;
+	public String get_name() {
+		return super.FIO;
 	}
+	
+	public int get_id() {
+		return super.id;
+	}
+	
+	public String toString() {
+		return "\nID клиента: " + super.id + "\nФИО клиента: " + super.FIO;
+	}
+	
 }
