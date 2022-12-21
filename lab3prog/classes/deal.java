@@ -32,19 +32,19 @@ public class deal {
 	}
 	
 	//Метод ввода.
-	public void deal_input() {
-		Car.car_input();
-		Manager.manager_input();
-		Client.client_input();
-		Service.service_input();
+	public void input() {
+		Car.input();
+		Manager.input();
+		Client.input();
+		Service.input();
 	}
 
 	//Метод вывода.
-	public void deal_output() {
-		Car.car_output();
-		Manager.manager_output();
-		Client.client_output();
-		Service.service_output();
+	public void output() {
+		Car.output();
+		Manager.output();
+		Client.output();
+		Service.output();
 	}
 	
 	//Метод подсчёта суммы, потраченной клиентом за сделку.
@@ -52,5 +52,9 @@ public class deal {
 		Integer sum = Car.get_cost() + Service.get_cost();
 		return sum;
 	}
-
+	
+	public String toString() {
+		return Car.toString() + "\n" + Manager.toString() + "\n"
+		+ Client.toString() + "\n" + Service.toString();
+	}
 }
