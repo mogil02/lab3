@@ -3,13 +3,35 @@ import classes.*;
 
 public class main {
 	public static void main(String args[]) {
-		dercl drcl = new dercl(12, "Иванов М. В.", 'M', 24);  
-        	client cl1 = new client(10, "Власенко Д. В.");
-        	client cl2 = new client(13, "Чазов В. В.");
+		client cl = new client(1,"Гаврилов А. Д.");
+        dercl dcl = new dercl(1,"Гаврилов А. Д.", 'M', 20);
+		try {
+        		client clone = (client) cl.clone();
+			System.out.println("Вывод объекта cl:\n" + cl);
+			System.out.println("\nВывод клона cl:\n" + clone + "\n\nВвод данных об объекте cl:");
+			cl.input();
+			System.out.println("\nВвод данных о клоне объекта cl:");
+			clone.input();
+			System.out.println("\nВывод обновлённого объекта cl:\n" + cl);
+			System.out.println("\nВывод обновлённого клона cl:\n" + clone);
+		}
+		catch(CloneNotSupportedException ex) {
+			ex.printStackTrace();
+		}
 
-        	System.out.println(drcl); //вывод через toString()
-        	System.out.println(cl1); //вывод через toString()
-		System.out.println(cl1); //вывод через toString()
+		try {
+        		dercl clone = (dercl) dcl.clone();
+			System.out.println("\n\nВывод объекта dcl:\n" + dcl);
+			System.out.println("\nВывод клона dcl:\n" + clone + "\n\nВвод данных об объекте dcl:");
+			dcl.input();
+			System.out.println("\nВвод данных о клоне объекта dcl:");
+			clone.input();
+			System.out.println("\nВывод обновлённого объекта dcl:\n" + dcl);
+			System.out.println("\nВывод обновлённого клона dcl:\n" + clone);
+		}
+		catch(CloneNotSupportedException ex) {
+			ex.printStackTrace();
+		}
 		
 	}
 }

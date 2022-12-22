@@ -1,7 +1,7 @@
 package classes;
 import java.util.Scanner;
 
-public class dercl extends client {
+public class dercl extends client implements Cloneable {
 	protected char gender;
 	protected int age;
 	

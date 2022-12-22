@@ -1,7 +1,7 @@
 package classes;
 import java.util.Scanner;
 
-public class client extends human implements interfacehuman {
+public class client extends human implements interfacehuman, Cloneable {
 
 	//Конструктор класса без параметров.
 	public client() {
@@ -35,5 +35,9 @@ public class client extends human implements interfacehuman {
 	
 	public String toString() {
 		return "ID клиента: " + super.id + "\nФИО клиента: " + super.FIO;
+	}
+	
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
 	}
 }
